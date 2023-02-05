@@ -1,0 +1,51 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMSG9JZWWG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZMSG9JZWWG');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WTF39VS');</script>
+<!-- End Google Tag Manager -->
+
+
+<script>
+function sendReadEvent(title, numberOfCharacters, author) {
+    gtag('event', 'read_article', {
+        "author": "Fahad Amer",
+        "title": "Articles",
+        "number_of_characters": numberOfCharacters,
+    });
+}
+document.addEventListener("DOMContentLoaded", () => {
+    const readArticle1Button = document.getElementById("read-article-1");
+    if (readArticle1Button) {
+        // Skickar event vid klick på artikel 1
+        readArticle1Button.addEventListener("click", () => {
+            sendReadEvent("Article 1", 50, "Fahad Amer")
+        });
+        // Skickar event vid klick på artikel 2
+        document.getElementById("read-article-2").addEventListener("click", () => {
+            sendReadEvent("Article 2", 100, "Anna S")
+        });
+        // Skickar event vid klick på artikel 3
+        document.getElementById("read-article-3").addEventListener("click", () => {
+            sendReadEvent("Article 3", 150, "Maria S")
+        });
+    }
+});
+  
+ console.log("2023-02-02 1124")
+</script>
+
+<script>
+  console.log("head-custom.html")
+</script>
